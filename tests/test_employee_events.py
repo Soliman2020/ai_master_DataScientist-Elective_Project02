@@ -73,4 +73,3 @@ def test_employee_events_table_exists(table_names):
     # is in the table_names list
     #### YOUR CODE HERE
     assert 'employee_events' in table_names
-

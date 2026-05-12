@@ -1,5 +1,6 @@
 from .combined_component import CombinedComponent
-from fasthtml.common import Button, Form, Group
+# from fasthtml.common import Button, Form, Group
+from fasthtml.common import Button, Form, Hgroup
 
 class FormGroup(CombinedComponent):
 
@@ -16,8 +17,8 @@ class FormGroup(CombinedComponent):
         return children
 
     def outer_div(self, children, div_args):
-
-        return Form(Group(*children), **div_args)
+        # return Form(Group(*children), **div_args)
+        return Form(Hgroup(*children), **div_args)
     
     def div_args(self, userid, model):
 

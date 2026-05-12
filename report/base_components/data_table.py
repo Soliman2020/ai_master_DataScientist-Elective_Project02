@@ -25,7 +25,7 @@ class DataTable(BaseComponent):
 
                 children = (*table.children, table_row)
                 table.children = children
-            
+
             return table
-            
-        
+
+        return ""

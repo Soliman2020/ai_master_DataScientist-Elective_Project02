@@ -1,15 +1,15 @@
 # Import the QueryBase class
-#### YOUR CODE HERE
+
 from .query_base import QueryBase
 
 # Define a subclass of QueryBase
 # called Employee
-#### YOUR CODE HERE
+
 class Employee(QueryBase):
 
     # Set the class attribute `name`
     # to the string "employee"
-    #### YOUR CODE HERE
+    
     name = "employee"
 
 
@@ -17,7 +17,7 @@ class Employee(QueryBase):
     # that receives no arguments
     # This method should return a list of tuples
     # from an sql execution
-    #### YOUR CODE HERE
+    
     def names(self):
         # Query 3
         # Write an SQL query
@@ -26,7 +26,7 @@ class Employee(QueryBase):
         # 2. The employee's id
         # This query should return the data
         # for all employees in the database
-        #### YOUR CODE HERE
+        
         query = """
             SELECT first_name || ' ' || last_name as full_name, employee_id
             FROM employee
@@ -38,7 +38,7 @@ class Employee(QueryBase):
     # that receives an `id` argument
     # This method should return a list of tuples
     # from an sql execution
-    #### YOUR CODE HERE
+    
     def username(self, id):
         # Query 4
         # Write an SQL query
@@ -46,7 +46,7 @@ class Employee(QueryBase):
         # Use f-string formatting and a WHERE filter
         # to only return the full name of the employee
         # with an id equal to the id argument
-        #### YOUR CODE HERE
+        
         query = f"""
             SELECT first_name || ' ' || last_name as full_name
             FROM employee
@@ -62,7 +62,7 @@ class Employee(QueryBase):
     # so when it is called, a pandas dataframe
     # is returns containing the execution of
     # the sql query
-    #### YOUR CODE HERE
+    
     def model_data(self, id):
 
         query = f"""
